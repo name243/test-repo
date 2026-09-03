@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'NAMU Pro';
+	src: url('../fonts/namu_pro.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/namu_pro.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/namu_pro.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/namu_pro.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/namu_pro.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/namu_pro.svg#namu_pro') format('svg'); /* Chrome < 4, Legacy iOS */
+}
