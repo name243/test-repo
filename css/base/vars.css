@@ -1,0 +1,14 @@
+:root {
+    --font-family: "Open Sans", sans-serif;
+    --second-family: "NAMU Pro", sans-serif;
+
+    /* colors */
+    --main-color: #fff;
+    --black-color: #111;
+
+    /* container */
+    --container-width: 1262px;
+    --container-padding: 70px;
+}
+
+

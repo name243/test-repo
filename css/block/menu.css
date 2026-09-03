@@ -1,0 +1,14 @@
+.menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.menu_link {
+    font-family: var(--second-family);
+    font-weight: 200;
+    font-size: 20px;
+    color: var(--main-color);
+}

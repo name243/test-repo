@@ -1,0 +1,32 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    background-color: var(--black-color);
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    margin-right: 50px;
+}
+
+
+@media (width >= 1300px) {
+.header_menu {
+    flex-grow: 1;
+    }
+}
+
+@media (width <= 1300px) {
+    .header_menu {
+        display: none;
+    }
+}
