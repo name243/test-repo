@@ -5,10 +5,16 @@
     /* colors */
     --main-color: #fff;
     --black-color: #111;
+    --fon-color: #ddd;
+    --roz-color: #c5358c;
+    --fon2-color: #F8F8F8;
 
     /* container */
     --container-width: 1262px;
     --container-padding: 70px;
+
+    /* transition */
+    --time: 0.3s
 }
 
 

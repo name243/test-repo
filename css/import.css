@@ -1,6 +1,15 @@
+/* css base */
 @import url('../css/base/namu_pro.css');
 @import url('../css/base/vars.css');
-@import url('../css/block/header.css');
-@import url('../css/block/menu.css');
 @import url('../css/base/globals.css');
 @import url('../css/base/normalize.css');
+
+
+
+/* css block */
+@import url('../css/block/header.css');
+@import url('../css/block/menu.css');
+@import url('../css/block/hero.css');
+@import url('../css/block/categories.css');
+@import url('../css/block/info.css');
+@import url('../css/block/why.css');
