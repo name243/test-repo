@@ -1,0 +1,278 @@
+.special {
+    padding-top: 150px;
+    background: var(--fon2-color);
+}
+
+.special_header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.special_title_text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 110%;
+    color: var(--black-color);
+    margin: 0; /* Убираем стандартный margin у h2 */
+    padding-bottom: 20px; /* Отступ до тегов, а не 50px */
+}
+
+.special_title_text span {
+    color: var(--roz-color);
+}
+
+/* Список тегов */
+.special_list {
+    display: flex;
+    flex-wrap: wrap; /* 👈 Обязательно! Теги будут переноситься */
+    gap: 20px; /* Чуть меньше отступ, чтобы компактнее */
+    align-items: center;
+}
+
+.special_tag {
+    display: inline-flex; /* Чтобы padding работал корректно */
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Рамка чуть светлее, как на современных сайтах */
+    border-radius: 31px;
+    padding: 8px 24px; /* Убрали жесткую высоту */
+    
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px; /* Чуть меньше для лучшей читаемости */
+    color: var(--black-color);
+    text-decoration: none;
+    white-space: nowrap; /* Текст внутри не ломается */
+    transition: all 0.2s ease;
+}
+
+.special_tag:hover {
+    border-color: var(--black-color);
+    background-color: var(--main-color);
+}
+
+/* Кнопка "Показать еще" */
+.special_show {
+    background: none;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--roz-color);
+    cursor: pointer;
+    padding: 8px 0;
+    margin-left: 10px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
+}
+
+.special_show:hover {
+    color: var(--roz-color);
+}
+
+/* Обертка сортировки */
+.special_wrapper {
+    position: relative;
+    display: inline-block;
+    min-width: 220px;
+    margin-left: auto;
+}
+
+.special_select {
+    appearance: none; /* Убираем стандартную стрелку браузера */
+    -webkit-appearance: none;
+    
+    width: 100%;
+    padding: 10px 40px 10px 20px; /* Справа отступ больше для нашей стрелки */
+    border: 1px solid var(--roz-color);
+    border-radius: 4px;
+    background-color: var(--main-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--black-color);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+
+}
+
+.special_select:hover {
+    border-color: var(--roz-color);
+}
+
+/* Кастомная стрелочка */
+.special_down {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--roz-color);
+    pointer-events: none;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .special_header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .special_wrapper {
+        width: 100%;
+    }
+    
+    .special_select {
+        width: 100%;
+    }
+}
+
+/* special_cards */
+.special_cards {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.product-card__image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-card__title {
+    font-family: var(--font-family);
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.4;
+    padding: 0 30px;
+    color: var(--black-color);
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+.product-card__status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    padding: 0 30px;
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
+.status-available {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4caf50;
+}
+
+.status-available .dot {
+    margin-right: 10px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+}
+
+.status-discount {
+    background-color: var(--roz-color);
+    color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+.product-card__price {
+    
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price-current {
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.price-old {
+    font-family: var(--font-family);
+    font-size: 24px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product-card__actions {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.quantity-counter {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border: 1px solid var(--black-color);
+    border-radius: 4px;
+    height: 44px;
+    background: var(--main-color);
+    justify-content: space-around;
+}
+
+.qty-btn {
+    width: auto;
+    height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.quantity-counter input {
+    width: 30px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+
+.btn-cart {
+    flex-grow: 1;
+    height: 44px;
+    background-color: #1a1a1a;
+    color: var(--main-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
