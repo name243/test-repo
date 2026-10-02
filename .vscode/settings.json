@@ -1,5 +1,0 @@
-{
-    "prettier.printWidth": 80,
-    "prettier.htmlWhitespaceSensitivity": "ignore",
-    "editor.formatOnSave": true
-}
