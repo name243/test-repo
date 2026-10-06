@@ -1,0 +1,101 @@
+
+.section_form-group {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: var(--fon2-color);
+}
+
+.container_from-group {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px; 
+  justify-content: space-between;
+}
+
+.form-section {
+  flex: 1; 
+  max-width: 500px;
+}
+
+.form-section h2 {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: var(--black-color);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group input {
+  font-family: var(--font-family);
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #0000008a;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-bottom-color: var(--black-color);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+/* Кнопки */
+.button-form {
+  background-color: var(--black-color);
+  color: var(--main-color);
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 45px;
+  height: 45px;
+  margin-top: -3px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .container_from-group {
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .form-section {
+    max-width: 100%;
+  }
+}
