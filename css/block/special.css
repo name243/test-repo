@@ -68,6 +68,19 @@
     transition: all 0.2s ease;
 }
 
+/* С 5-го тега и дальше — скрыты по умолчанию */
+.special_list .special_tag:nth-of-type(n + 5) {
+  display: none;
+}
+
+/* Когда список открыт — показываем всё */
+.special_list.is-open .special_tag {
+  display: inline-flex;
+}
+
+
+
+
 @media (width < 400px) {
     .special_tag {
         font-size: 10px;
@@ -287,6 +300,7 @@
 .qty-btn {
     width: auto;
     height: 100%;
+    min-width: 44px; 
     font-size: 20px;
     cursor: pointer;
     color: var(--black-color);
@@ -302,7 +316,9 @@
 }
 
 .btn-cart {
+
     flex-grow: 1;
+    padding: 0 30px;
     height: 44px;
     background-color: #1a1a1a;
     color: var(--main-color);
@@ -311,6 +327,12 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+@media (hover: hover) {
+  .btn-cart:hover {
+    background-color: var(--roz-color);
+  }
 }
 
 /* стрелки в конце секции */

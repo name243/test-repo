@@ -94,6 +94,8 @@
     transition: opacity var(--time) ease;
 }
 
+
+
 .news-card__link:hover {
     opacity: 0.7;
 }
@@ -122,14 +124,19 @@
                 color var(--time) ease;
 }
 
-.show-more-btn:hover {
-    background: var(--black-color);
-    color: var(--main-color);
+
+@media (hover: hover) {
+  .show-more-btn:hover {
+    color: var(--roz-color);
+    border-color: var(--roz-color);
 }
 
 .show-more-btn:hover svg {
-    stroke: var(--main-color);
+    stroke: var(--roz-color);
 }
+  }
+
+
 
 .show-more-btn svg {
     width: 20px;
