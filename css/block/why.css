@@ -103,6 +103,13 @@
     }
 }
 
+@media (width < 410px) {
+    .why_img {
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+}
+
 
 .why_content {
     padding: 0 40px 46px;

@@ -4,6 +4,12 @@
     background: var(--fon2-color);
 }
 
+@media (width < 900px) {
+    .special {
+    padding-bottom: 50px;
+    }
+}
+
 .special_header {
     display: flex;
     flex-wrap: wrap;
@@ -14,11 +20,22 @@
 .special_title_text {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 46px;
     line-height: 110%;
     color: var(--black-color);
     margin: 0; /* Убираем стандартный margin у h2 */
     padding-bottom: 20px; /* Отступ до тегов, а не 20px */
+}
+
+@media (width >= 590px) {
+    .special_title_text {
+    font-size: 46px;
+    }
+}
+
+@media (width < 590px) {
+    .special_title_text {
+        font-size: 24px;
+    }
 }
 
 .special_title_text span {
@@ -49,6 +66,13 @@
     text-decoration: none;
     white-space: nowrap; /* Текст внутри не ломается */
     transition: all 0.2s ease;
+}
+
+@media (width < 400px) {
+    .special_tag {
+        font-size: 10px;
+        font-weight: 500;
+    }
 }
 
 .special_tag:hover {
@@ -120,7 +144,6 @@
 /* Адаптив для мобильных */
 @media (max-width: 768px) {
     .special_header {
-        flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
@@ -140,6 +163,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+@media (width < 900px) {
+    .special_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 774px) {
+    .special_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .product-card {

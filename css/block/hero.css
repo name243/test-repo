@@ -4,6 +4,15 @@
     overflow: hidden
 }
 
+@media (width < 687px) {
+    .hero {
+    padding-bottom: 50px;
+    }
+    .hero_img {
+        display: none;
+    }
+}
+
 .hero_container {
     display: flex;
     align-items: center;
@@ -59,8 +68,10 @@
 }
 
 .hero_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 3px;
-    padding: 10px 20px;
     width: 235px;
     height: 64px;
     background: var(--roz-color);

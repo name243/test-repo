@@ -52,6 +52,12 @@
     background: var(--fon-color);
 }
 
+@media (width < 410px) {
+    .news-card__image {
+        height: auto;
+    }
+}
+
 .news-card__date {
     font-family: var(--font-family);
     font-size: 14px;
