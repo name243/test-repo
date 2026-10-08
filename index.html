@@ -12,42 +12,35 @@
 <body class="page_body">
   <header class="header">
     <div class="container header_container">
-      <a href="#" class="logo header_logo">
-        <img class="logo_img" src="./images/logo/logo.svg" alt="Логотип" height="77" width="183" />
-      </a>
-      <nav class="menu header_menu" aria-label="Главное меню">
-        <ul class="menu_list">
-          <li class="menu_item">
-            <a href="#about" class="menu_link">О нас</a>
-          </li>
-          <li class="menu_item">
-            <a href="#delivery" class="menu_link">
-              Доставка и оплата
-            </a>
-          </li>
-          <li class="menu_item">
-            <a href="#registration" class="menu_link">
-              Регистрация продукта
-            </a>
-          </li>
-          <li class="menu_item">
-            <a href="#service" class="menu_link">Сервис</a>
-          </li>
-          <li class="menu_item">
-            <a href="#certificates" class="menu_link">
-              Сертификаты и лицензии
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header_controls">
-        <button class="header_actions-button" type="button">
-  <img class="header_actions-icon" src="./images/shopping-bag.svg" alt="shopping" width="48" height="48" />
-  <span class="header_actions-count" aria-live="polite"></span>
-</button>
-      </div>
+
+        <a href="/" class="logo header_logo">
+            <img class="logo_img" src="./images/logo/logo.svg" alt="Логотип" height="77" width="183" />
+        </a>
+
+        <!-- Кнопка-бургер, показывается при <= 1300px -->
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainMenu">
+            <img class="burger_icon" src="./images/logo/menu-hambuger.svg" alt="" height="50" width="55" />
+        </button>
+
+        <nav class="menu header_menu" id="mainMenu" aria-label="Главное меню">
+            <ul class="menu_list">
+                <li class="menu_item"><a href="#about" class="menu_link">О нас</a></li>
+                <li class="menu_item"><a href="#delivery" class="menu_link">Доставка и оплата</a></li>
+                <li class="menu_item"><a href="#registration" class="menu_link">Регистрация продукта</a></li>
+                <li class="menu_item"><a href="#service" class="menu_link">Сервис</a></li>
+                <li class="menu_item"><a href="#certificates" class="menu_link">Сертификаты и лицензии</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_controls">
+            <button class="header_actions-button" type="button">
+                <img class="header_actions-icon" src="./images/shopping-bag.svg" alt="Корзина" width="48" height="48" />
+                <span class="header_actions-count" aria-live="polite"></span>
+            </button>
+        </div>
+
     </div>
-  </header>
+</header>
   <main class="main">
     <section class="hero">
       <div class="container hero_container">

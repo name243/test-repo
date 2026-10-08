@@ -29,6 +29,7 @@
 @media (width <= 1300px) {
     .header_menu {
         display: none;
+        
     }
 }
 
@@ -68,4 +69,102 @@
 .header_actions-count:empty,
 .header_actions-count[data-count="0"] {
   display: none;
+}
+
+/* ===== Бургер ===== */
+.burger {
+    display: none;               /* по умолчанию скрыт */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1002;               /* выше меню и хедера */
+    margin-left: auto;           /* прижимаем к правому краю */
+    margin-right: 20px;          /* отступ от корзины */
+}
+
+.burger_icon {
+    display: block;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.burger.is-active .burger_icon {
+    transform: rotate(180deg);
+}
+
+/* ===== Меню на десктопе (ваш стиль) ===== */
+@media (width >= 1300px) {
+    .header_menu {
+        flex-grow: 1;
+    }
+}
+
+/* ===== Мобильная/планшетная версия ===== */
+@media (width <= 1300px) {
+
+    /* Показываем бургер */
+    .burger {
+        display: block;
+    }
+
+    /* Меню превращается в выезжающую панель */
+    .header_menu {
+        display: flex;                  /* перебиваем display: none */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        max-width: 360px;
+        height: 100vh;
+        background: var(--black-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px 20px;
+        box-sizing: border-box;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    .header_menu.is-open {
+        right: 0;
+    }
+
+    .menu_list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu_link {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* Блокировка скролла */
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
+
+/* ===== Маленькие экраны ===== */
+@media (width <= 420px) {
+    .burger_icon {
+        width: 32px;
+    }
+
+    .logo_img {
+        width: 120px;
+        height: auto;
+    }
+
+    .header_logo {
+        margin-right: 0;
+    }
 }
