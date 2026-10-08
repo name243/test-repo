@@ -23,9 +23,7 @@
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .news-section {
-        padding: 40px 30px 60px;
-    }
+    
 }
 
 @media (max-width: 600px) {

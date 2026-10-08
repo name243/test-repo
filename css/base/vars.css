@@ -12,6 +12,9 @@
     /* container */
     --container-width: 1262px;
     --container-padding: 70px;
+    @media (width < 420px) {
+        --container-padding: 20px;
+    } 
 
     /* transition */
     --time: 0.3s

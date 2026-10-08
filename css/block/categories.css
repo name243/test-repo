@@ -14,8 +14,10 @@
     flex-direction: column;
     color: var(--black-color);
     border-radius: 8px;
+    
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all var(--time) ease;
+    
 }
 
 .card:hover {
@@ -24,9 +26,17 @@
 }
 
 .card_content {
+    
     padding: 30px 40px;
     transition: background-color var(--time) ease, color var(--time) ease;
 }
+
+@media (width < 420px) {
+    .card_content {
+        padding: 10px 15px;
+    }
+}
+
 
 .card:hover .card_content {
   background-color: var(--black-color);
@@ -45,6 +55,12 @@
     font-size: 26px;
     color: var(--black-color);
     margin-bottom: 10px;
+}
+
+@media (width < 420px) {
+    .card_title {
+        font-size: 16px;
+    }
 }
 
 
@@ -67,8 +83,6 @@
         grid-template-columns: 1fr;
   }
   
-  .card_img {
-    height: 250px;
-  }
+  
   
 }
