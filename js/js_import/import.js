@@ -8,5 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNext();
   initCount();
+  initCart();
   initBurger();
 });
